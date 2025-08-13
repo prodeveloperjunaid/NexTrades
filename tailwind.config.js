@@ -20,6 +20,13 @@ module.exports = {
           700: "rgb(55, 65, 81)", // gray-700
           800: "rgb(31, 41, 55)", // gray-800
         },
+        // New background colors (soft light options)
+        background: {
+          light: "#f8fafc",   // slate-50 (soft blue-white, best for screens)
+          subtle: "#f3f4f6",  // gray-100 (very light gray)
+          warm: "#f5f5f4",    // stone-50 (slightly warm white)
+          DEFAULT: "#ffffff", // pure white (fallback)
+        },
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

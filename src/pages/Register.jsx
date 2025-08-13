@@ -22,29 +22,29 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="flex items-center justify-center min-h-screen p-4 bg-background-light"  >
       {/* Main Container */}
-      <div className="w-full max-w-7xl bg-white rounded-xl overflow-hidden flex flex-col md:flex-row h-[550px]">
+      <div className="w-full max-w-7xl rounded-xl overflow-hidden flex flex-col md:flex-row h-[550px]">
         
         {/* Left Side - Form (smaller width) */}
-        <div className="md:w-2/5 p-3 md:p-8 ">
-          <div className="text-center mb-5">
+        <div className="p-3 md:w-2/5 md:p-8 ">
+          <div className="mb-5 text-center">
             <h1 className="text-[28px] font-bold text-gray-800 md:text-3xl">Create Your New Account</h1>
-            <p className="text-gray-600 mt-2">Join Pakistan's premier wholesale marketplace</p>
+            <p className="mt-2 text-gray-600">Join Pakistan's premier wholesale marketplace</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-3">
             {/* Name Field */}
             <div>
-              <label className="block text-gray-700 text-sm font-medium mb-1">Full Name</label>
+              <label className="block mb-1 text-sm font-medium text-gray-700">Full Name</label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <FaUser className="text-gray-400" />
                 </div>
                 <input
                   name="name"
                   type="text"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full py-3 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   placeholder="John Doe"
                   value={formData.name}
                   onChange={handleChange}
@@ -55,15 +55,15 @@ const Register = () => {
 
             {/* Email Field */}
             <div>
-              <label className="block text-gray-700 text-sm font-medium mb-1">Email Address</label>
+              <label className="block mb-1 text-sm font-medium text-gray-700">Email Address</label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <FaEnvelope className="text-gray-400" />
                 </div>
                 <input
                   name="email"
                   type="email"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full py-3 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   placeholder="your@email.com"
                   value={formData.email}
                   onChange={handleChange}
@@ -74,15 +74,15 @@ const Register = () => {
 
             {/* Password Field */}
             <div>
-              <label className="block text-gray-700 text-sm font-medium mb-1">Password</label>
+              <label className="block mb-1 text-sm font-medium text-gray-700">Password</label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <FaLock className="text-gray-400" />
                 </div>
                 <input
                   name="password"
                   type="password"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full py-3 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   placeholder="••••••••"
                   value={formData.password}
                   onChange={handleChange}
@@ -93,25 +93,25 @@ const Register = () => {
 
             {/* Role Selection */}
             <div>
-              <label className="block text-gray-700 text-sm font-medium mb-1">Register As</label>
+              <label className="block mb-1 text-sm font-medium text-gray-700">Register As</label>
               <div className="relative">
                 <select
                   name="role"
-                  className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent appearance-none"
+                  className="w-full py-3 pl-10 pr-10 border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   value={formData.role}
                   onChange={handleChange}
                 >
                   <option value="buyer">Buyer (I want to purchase products)</option>
                   <option value="seller">Seller (I want to sell products)</option>
                 </select>
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   {formData.role === 'buyer' ? (
                     <FaShoppingCart className="text-gray-400" />
                   ) : (
                     <FaStore className="text-gray-400" />
                   )}
                 </div>
-                <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                   <FaChevronDown className="text-gray-400" />
                 </div>
               </div>
@@ -120,7 +120,7 @@ const Register = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition-colors shadow-md"
+              className="w-full px-4 py-3 font-bold text-white transition-colors bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700"
             >
               Create Account
             </button>
@@ -130,7 +130,7 @@ const Register = () => {
           <div className="mt-5 text-center">
             <p className="text-sm text-gray-600">
               Already have an account?{' '}
-              <Link to="/login" className="text-indigo-600 hover:text-indigo-500 font-medium">
+              <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
                 Sign In
               </Link>
             </p>
@@ -139,11 +139,11 @@ const Register = () => {
 
 
         {/* Right Side - Image (larger width) */}
-        <div className="hidden md:block md:w-3/5 ml-20 relative">
+        <div className="relative hidden ml-20 md:block md:w-3/5">
           <img 
             src="./Images/RegisterImg.jpg"
             alt="NexTrade Registration" 
-            className="absolute inset-0 w-full h-full object-contain"
+            className="absolute inset-0 object-contain w-full h-full"
           />
         </div>
 

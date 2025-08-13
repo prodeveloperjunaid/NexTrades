@@ -15,33 +15,33 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-indigo-800 p-4">
-      <div className="w-full max-w-fit bg-white rounded-xl shadow-xl overflow-hidden">
-        <div className="bg-indigo-700 p-6 text-center">
+    <div className="flex items-center justify-center min-h-screen p-4 bg-background-light">
+      <div className="w-full overflow-hidden bg-white shadow-xl max-w-fit rounded-xl">
+        <div className="p-6 text-center bg-indigo-700">
           <div className="flex items-center justify-center mb-4">
-            <FaShoppingBasket className="text-white text-4xl mr-2" />
+            <FaShoppingBasket className="mr-2 text-4xl text-white" />
             <h1 className="text-xl font-bold text-white">NexTrade</h1>
           </div>
-          <p className="text-indigo-200 text-sm">Digital Marketplace for Wholesale Trading</p>
+          <p className="text-sm text-indigo-200">Digital Marketplace for Wholesale Trading</p>
         </div>
 
         <div className="p-6">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Welcome Back</h2>
+          <h2 className="mb-6 text-2xl font-bold text-center text-gray-800">Welcome Back</h2>
           
           <form onSubmit={handleSubmit}>
             {/* Email Input */}
             <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="email">
+              <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="email">
                 Email Address
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <FaUser className="text-gray-400" />
                 </div>
                 <input
                   id="email"
                   type="email"
-                  className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full py-3 pl-10 pr-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   placeholder="your@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -52,17 +52,17 @@ const Login = () => {
 
             {/* Password Input */}
             <div className="mb-6">
-              <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="password">
+              <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="password">
                 Password
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <FaLock className="text-gray-400" />
                 </div>
                 <input
                   id="password"
                   type={showPassword ? "text" : "password"}
-                  className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full py-3 pl-10 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -70,7 +70,7 @@ const Login = () => {
                 />
                 <button
                   type="button"
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                  className="absolute inset-y-0 right-0 flex items-center pr-3"
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? (
@@ -87,11 +87,11 @@ const Login = () => {
                 <input
                   id="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                  className="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
                 />
-                <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
+                <label htmlFor="remember-me" className="block ml-2 text-sm text-gray-700">
                   Remember me
                 </label>
               </div>
@@ -102,7 +102,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-300"
+              className="w-full px-4 py-3 font-bold text-white transition duration-300 bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:shadow-outline"
             >
               Sign In
             </button>
@@ -118,8 +118,8 @@ const Login = () => {
           </form>
         </div>
 
-        <div className="bg-gray-50 px-6 py-4">
-          <p className="text-xs text-gray-500 text-center">
+        <div className="px-6 py-4 bg-gray-50">
+          <p className="text-xs text-center text-gray-500">
             © 2025 NexTrade - Faculty of Computer Science, University of South Asia
           </p>
         </div>
